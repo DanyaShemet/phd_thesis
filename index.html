@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аспірантська робота</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__content">
+          <h1>Робота над дисертацією </h1>
+          <p class="hero__lead">
+            Шемет Даніїл
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="panel filters-panel">
+          <div class="filters-panel__header">
+            <h2>Навігація</h2>
+            <p>Фільтри по основних розділах сторінки.</p>
+          </div>
+          <div
+            id="section-filters"
+            class="filter-chips"
+            aria-label="Фільтр розділів"
+          ></div>
+        </section>
+
+        <div id="sections" class="sections" aria-live="polite"></div>
+      </main>
+    </div>
+
+    <template id="section-template">
+      <section class="panel category">
+        <div class="category__header">
+          <div>
+            <p class="category__eyebrow"></p>
+            <h2 class="category__title"></h2>
+            <p class="category__description"></p>
+          </div>
+          <div class="category__count"></div>
+        </div>
+        <div class="category__items"></div>
+      </section>
+    </template>
+
+    <template id="item-template">
+      <article class="entry">
+        <div class="entry__body">
+          <div class="entry__topline">
+            <h3 class="entry__title"></h3>
+            <span class="entry__status"></span>
+          </div>
+          <p class="entry__description"></p>
+          <div class="entry__meta-links"></div>
+        </div>
+        <a class="entry__link entry__link--primary" target="_blank" rel="noreferrer noopener">
+          Відкрити
+        </a>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
